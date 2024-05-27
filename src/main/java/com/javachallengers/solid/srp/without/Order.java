@@ -1,5 +1,7 @@
 package com.javachallengers.solid.srp.without;
 
+import java.util.List;
+
 public class Order {
     private List<Item> items;
     private double total;
