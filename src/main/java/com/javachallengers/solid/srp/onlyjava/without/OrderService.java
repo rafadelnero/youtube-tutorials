@@ -1,6 +1,4 @@
-package com.javachallengers.solid.srp.without;
-
-import com.javachallengers.solid.srp.without.Order;
+package com.javachallengers.solid.srp.onlyjava.without;
 
 public class OrderService {
     public void processOrder(Order order) {

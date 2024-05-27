@@ -1,4 +1,4 @@
-package com.javachallengers.solid.srp.with;
+package com.javachallengers.solid.srp.onlyjava.with;
 
 public class OrderCalculator {
     public double calculateTotal(Order order) {

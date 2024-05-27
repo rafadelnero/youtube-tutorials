@@ -1,4 +1,4 @@
-package com.javachallengers.solid.srp.with;
+package com.javachallengers.solid.srp.onlyjava.without;
 
 import java.util.List;
 
@@ -11,12 +11,10 @@ public class Order {
         this.total = 0.0;
     }
 
-    public List<Item> getItems() {
-        return items;
-    }
-
-    public void setTotal(double total) {
-        this.total = total;
+    public void calculateTotal() {
+        for (Item item : items) {
+            total += item.getPrice() * item.getQuantity();
+        }
     }
 
     public double getTotal() {

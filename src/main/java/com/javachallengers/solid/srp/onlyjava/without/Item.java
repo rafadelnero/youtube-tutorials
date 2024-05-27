@@ -1,4 +1,4 @@
-package com.javachallengers.solid.srp.with;
+package com.javachallengers.solid.srp.onlyjava.without;
 
 public class Item {
     private String name;
