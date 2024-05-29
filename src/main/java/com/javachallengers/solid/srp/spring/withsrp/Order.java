@@ -10,11 +10,17 @@ public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private Long userId;
     private Long bookId;
     private int quantity;
 
-    // Getters and setters
+    public Order(Long userId, Long bookId, int quantity) {
+        this.userId = userId;
+        this.bookId = bookId;
+        this.quantity = quantity;
+    }
+
     public Long getId() {
         return id;
     }
