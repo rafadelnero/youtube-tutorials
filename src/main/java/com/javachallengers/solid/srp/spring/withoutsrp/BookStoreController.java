@@ -23,19 +23,16 @@ public class BookStoreController {
 
     @PostMapping("/placeOrder")
     public ResponseEntity<Object> placeOrder(@RequestBody OrderRequest orderRequest) {
-        // Validate user
         User user = userRepository.findById(orderRequest.getUserId()).orElse(null);
         if (user == null) {
             return ResponseEntity.status(HttpStatus.FORBIDDEN).body("Invalid User");
         }
 
-        // Check inventory
         Book book = bookRepository.findById(orderRequest.getBookId()).orElse(null);
         if (book == null || book.getStock() <= 0) {
             return ResponseEntity.badRequest().body("Book not available");
         }
 
-        // Place order
         if (book.getStock() < orderRequest.getQuantity()) {
             return ResponseEntity.badRequest().body("Insufficient book stock");
         }
