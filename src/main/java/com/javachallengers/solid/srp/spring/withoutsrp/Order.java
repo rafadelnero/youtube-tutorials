@@ -15,7 +15,6 @@ public class Order {
     private Long bookId;
     private int quantity;
 
-    // Getters and setters
     public Long getId() {
         return id;
     }

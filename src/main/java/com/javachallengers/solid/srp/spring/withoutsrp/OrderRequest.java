@@ -5,7 +5,6 @@ public class OrderRequest {
     private Long bookId;
     private int quantity;
 
-    // Getters and Setters
     public Long getUserId() {
         return userId;
     }
