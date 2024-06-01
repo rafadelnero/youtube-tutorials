@@ -9,8 +9,11 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api/orders")
 public class OrderController {
 
-    @Autowired
     private OrderService orderService;
+
+    public OrderController(OrderService orderService) {
+        this.orderService = orderService;
+    }
 
     @PostMapping("/placeOrder")
     public ResponseEntity<Object> placeOrder(@RequestBody OrderRequest orderRequest) {

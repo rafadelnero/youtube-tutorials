@@ -8,14 +8,16 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 public class OrderService {
 
-    @Autowired
     private UserRepository userRepository;
-
-    @Autowired
     private BookRepository bookRepository;
-
-    @Autowired
     private OrderRepository orderRepository;
+
+    public OrderService(UserRepository userRepository, BookRepository bookRepository,
+                        OrderRepository orderRepository) {
+        this.userRepository = userRepository;
+        this.bookRepository = bookRepository;
+        this.orderRepository = orderRepository;
+    }
 
     public String placeOrder(OrderRequest orderRequest) {
         User user = userRepository.findById(orderRequest.getUserId()).orElseThrow(() -> new RuntimeException("Invalid User"));
