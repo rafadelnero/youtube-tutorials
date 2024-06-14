@@ -9,5 +9,9 @@ public class Main {
         PaymentProcessor payPalProcessor = new PayPalProcessor();
         checkout = new CheckoutService(payPalProcessor);
         checkout.checkout(150.00);
+
+        PaymentProcessor debitProcessor = new DebitProcessor();
+        checkout = new CheckoutService(debitProcessor);
+        checkout.checkout(100);
     }
 }
