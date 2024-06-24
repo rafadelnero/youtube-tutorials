@@ -3,13 +3,17 @@ package com.javachallengers.solid.isp.worker.with;
 public class Main {
     public static void main(String[] args) {
         Workable humanWorker = new HumanWorker();
-        Eatable humanEater = new HumanWorker();
+        work(humanWorker);
+
         Workable robotWorker = new RobotWorker();
+        work(robotWorker);
 
-        humanWorker.work();
+        Eatable humanEater = new HumanWorker();
         humanEater.eat();
-
-        robotWorker.work();
         // robotWorker does not have an eat() method because it doesn't need one
+    }
+
+    public static void work(Workable workable) {
+        workable.work();
     }
 }
