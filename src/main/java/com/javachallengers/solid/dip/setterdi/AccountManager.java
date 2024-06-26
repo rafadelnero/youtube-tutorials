@@ -10,7 +10,7 @@ public class AccountManager {
 
     public void manage(String accountId) {
         if (accountService != null) {
-            accountService.manageAccount(accountId);
+
         } else {
             System.out.println("AccountService not set.");
         }

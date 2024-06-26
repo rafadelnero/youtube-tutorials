@@ -7,7 +7,7 @@ public class Main {
         
         AccountManager accountManager = new AccountManager();
         
-        accountManager.setAccountService(userAccountService);
+//        accountManager.setAccountService(userAccountService);
         accountManager.manage("user123");
 
         accountManager.setAccountService(adminAccountService);
