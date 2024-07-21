@@ -8,6 +8,6 @@ public class Main {
         myCar.displayBrand();
 
         // Can't instantiate an abstract class
-        // new Vehicle(); an abstract class can be only used with inheritance
+        // new Vehicle(); // an abstract class can be only used with inheritance
     }
 }

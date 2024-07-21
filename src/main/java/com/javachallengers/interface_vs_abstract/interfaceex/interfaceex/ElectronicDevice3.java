@@ -1,8 +1,8 @@
-package com.javachallengers.interface_vs_abstract.interfaceex;
+package com.javachallengers.interface_vs_abstract.interfaceex.interfaceex;
 
-interface ElectronicDevice {
+interface ElectronicDevice3 {
 
-    String DEVICE_CATEGORY = "General Electronics";
+    public static final String DEVICE_CATEGORY = "General Electronics";
 
     void turnOn();
     void turnOff();

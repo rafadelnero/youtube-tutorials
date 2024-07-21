@@ -1,13 +1,13 @@
 package com.javachallengers.interface_vs_abstract.interfaceex.abstractex;
 
-abstract class Vehicle {
+abstract class Vehicle2 {
     private String brand;
 
-    public Vehicle(String brand) {
+    public Vehicle2(String brand) {
         this.brand = brand;
     }
 
-    abstract void start();
+    public abstract void start();
     public abstract void stop();
 
     public void displayBrand() {
