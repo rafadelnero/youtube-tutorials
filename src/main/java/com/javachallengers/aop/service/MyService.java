@@ -17,12 +17,13 @@ public class MyService {
         System.out.println("Task performed");
     }
 
-    public List<String> returnData() {
-        return List.of("test1", "test2", "test3");
-    }
-
     public void performTaskWithException() {
         throw new RuntimeException("Error within this method...");
+    }
+
+    @AuditAction("return...")
+    public List<String> returnData() {
+        return List.of("test1", "test2", "test3");
     }
 
     @AuditAction("update...")

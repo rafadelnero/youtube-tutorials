@@ -18,7 +18,8 @@ public class LoggingAspect {
         logger.info("Entering method: " + joinPoint.getSignature().getName());
     }
 
-    @AfterReturning(pointcut = "execution(* com.javachallengers.aop.service.*.*(..))", returning = "result")
+    @AfterReturning(pointcut = "execution(* com.javachallengers.aop.service.*.*(..))",
+            returning = "result")
     public void logAfterReturning(JoinPoint joinPoint, Object result) {
         Logger logger = LoggerFactory.getLogger(joinPoint.getTarget().getClass());
         logger.info("Method returned value is : " + result);

@@ -21,7 +21,8 @@ public class AuditAspect {
         String username = "userTest";
 
         // Log the audit information
-        System.out.println("User " + username + " performed " + auditAction.value() + " on " + joinPoint.getSignature().getName());
+        System.out.println("User " + username + " performed " +
+                auditAction.value() + " on " + joinPoint.getSignature().getName());
 
         // Alternatively, save the audit record in a database or external system
         // auditService.recordAction(username, auditAction.value(), joinType.getSignature().getName());

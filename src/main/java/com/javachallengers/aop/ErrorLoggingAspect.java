@@ -14,7 +14,8 @@ public class ErrorLoggingAspect {
 
     private static final Logger logger = LoggerFactory.getLogger(ErrorLoggingAspect.class);
 
-    @AfterThrowing(pointcut = "execution(* com.javachallengers.aop.service.*.*(..))", throwing = "ex")
+    @AfterThrowing(pointcut = "execution(* com.javachallengers.aop.service.*.*(..))",
+            throwing = "ex")
     public void logError(JoinPoint joinPoint, Throwable ex) {
         String methodName = joinPoint.getSignature().getName();
         String className = joinPoint.getTarget().getClass().getSimpleName();

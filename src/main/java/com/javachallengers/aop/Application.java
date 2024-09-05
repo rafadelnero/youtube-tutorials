@@ -11,17 +11,14 @@ public class Application {
 
         MyService myService = context.getBean(MyService.class);
 
+//        myService.performTask();
 
 //        myService.performTaskWithException();
-
+//
         myService.returnData();
-//        myService.updateWithUserAuditing();
+        myService.updateWithUserAuditing();
 
         context.close();
     }
 
-    static void testExecutionTimeAspect(MyService myService) {
-        myService.performTask();
-        myService.anotherTask();
-    }
 }
